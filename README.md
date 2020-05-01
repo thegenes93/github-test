@@ -27,3 +27,5 @@ na pasta execute
     npm start
 
     
+ Apk para teste disponivel na raiz do projeto
+    
