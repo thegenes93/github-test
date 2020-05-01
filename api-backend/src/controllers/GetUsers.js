@@ -4,15 +4,14 @@ const path = '/users?since=';
 const path2 = '/users/';
 
 
-
 module.exports = {
 
-
     async usersAll(req, res) {
+    
         let since = req.query.since;
         let restg = await axios.get(`${hostname}${path}${since}`);
-        console.log(restg.data.length);
-        res.send(restg.data);
+        res.header('x-Total-Count', restg.data[29].id)
+        return res.send(restg.data);
     },
 
     async userGet(req, res) {
@@ -21,12 +20,10 @@ module.exports = {
         res.send(user.data);
 
     },
-    
+
     async userRepos(req, res) {
         const { username } = req.params;
-        console.log(username);
         let user = await axios.get(`${hostname}${path2}${username}/repos`);
-        console.log(user.data);
         res.send(user.data);
     }
 
