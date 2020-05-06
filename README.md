@@ -18,6 +18,13 @@ backend esta disponivel
 
     https://testegithub.herokuapp.com/
 
+Para rodar os testes execute 
+
+	npm test
+
+***********************************************************************************
+
+
 Para Iniciar o front-end navegue 
 
     ../mobile-front/
